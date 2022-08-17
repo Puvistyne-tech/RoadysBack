@@ -1,0 +1,39 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec npx babel-node src/index.js -e js,graphql,json",
+    "prisma:merge": "prisma-merge",
+    "prisma:migrate": "prisma migrate dev --schema ./src/prisma/schema.prisma",
+    "seed:users": "nodemon --exec npx babel-node src/seeds/seedUser.js -e js,json"
+  },
+  "repository": "git@gitlab.com:PierreCHEVALLIER-THILL/roadys.git",
+  "author": "Pierre Chevallier <pierre.chevallier@epitech.eu>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/node": "^7.16.7",
+    "@babel/preset-flow": "^7.16.7",
+    "@prisma/client": "^3.7.0",
+    "apollo-server": "^3.6.1",
+    "babel-eslint": "^10.1.0",
+    "babel-node": "^0.0.1-security",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-expo": "^9.0.2",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^16.2.0",
+    "graphql-import": "^1.0.2",
+    "graphql-tools": "^8.2.0",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "merge-graphql-schemas": "^1.7.8",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "global": "^4.4.0",
+    "prisma": "^3.7.0",
+    "prisma-merge": "^0.2.0",
+    "studio": "^0.13.5"
+  }
+}
