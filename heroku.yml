@@ -1,20 +1,6 @@
 setup:
   addons:
     - heroku-postgresql:dev
-  config:
-    DATABASE_URL: jdbc:postgresql://ec2-52-71-69-66.compute-1.amazonaws.com:5432/d7dl4hbppuljn
-    DATABASE_URL_PASSWORD: ${POSTGRES_PASSWORD}
-    DATABASE_URL_USERNAME: ${POSTGRES_USER}
-    DATABASE_URL_PORT: 5432
-    DATABASE_URL_HOST: ec2-52-71-69-66.compute-1.amazonaws.com
-    DATABASE_URL_SCHEMA: d7dl4hbppuljn
-    DATABASE_URL_JDBC_DRIVER: org.postgresql.Driver
-    DATABASE_URL_JDBC_URL: jdbc:postgresql://ec2-52-71-69-66.compute-1.amazonaws.com:5432/d7dl4hbppuljn
-    DATABASE_URL_JDBC_URL_PASSWORD: ${POSTGRES_PASSWORD}
-    DATABASE_URL_JDBC_URL_USERNAME: ${POSTGRES_USER}
-    DATABASE_URL_JDBC_URL_PORT: 5432
-    DATABASE_URL_JDBC_URL_HOST: ec2-52-71-69-66.compute-1.amazonaws.com
-    DATABASE_URL_JDBC_URL_SCHEMA: d7dl4hbppuljn
 
 build:
   docker:
