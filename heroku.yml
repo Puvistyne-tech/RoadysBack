@@ -1,6 +1,6 @@
 setup:
   addons:
-    - heroku-postgresql:dev
+    - "heroku-postgresql:dev"
 
 build:
   docker:
