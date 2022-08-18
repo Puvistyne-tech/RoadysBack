@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import { PrismaClient } from '@prisma/client'
 import { ApolloServer } from 'apollo-server'
 // import resolvers from './graphql/resolvers'
-import resolvers from './graphql/resolvers.js'
+import resolvers from './graphql/resolvers'
 import getUser from './graphql/user/helpers'
 
 dotenv.config()
