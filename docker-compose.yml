@@ -9,7 +9,7 @@ services:
     image: api
     container_name: roadys_api
     command: sh -c "npm run prisma:migrate &&
-      npm run prisma:merger &&
+      npm run prisma:merge &&
       npm start"
     ports:
       - 8000:8000
