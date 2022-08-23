@@ -6,10 +6,9 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: docker/api
+    image: api
     container_name: roadys_api
-    command: sh -c "yarn install &&
-      npm run prisma:migrate &&
+    command: sh -c "npm run prisma:migrate &&
       npm run prisma:merger &&
       npm start"
     ports:
