@@ -1,21 +1,11 @@
-FROM node:16.15.0
+FROM node:16.15
 
-WORKDIR /app
+WORKDIR /api
 
-COPY package.json .
+COPY package.json /api/package.json
+COPY package-lock.json /api/package-lock.json
+COPY yarn.lock /api/yarn.lock
 
 RUN yarn install
 
-COPY . .
-
-EXPOSE 8000
-EXPOSE 8080
-
-PORT 8000
-
-CMD ["docker","compose", "up", "--build"]
-CMD ["npm","run","prisma:merge"]
-CMD ["npm","run","prisma:generate"]
-CMD ["npm","run","prisma:migrate"]
-CMD ["npm","run","prisma:generate"]
-CMD ["npm", "start"]
+COPY . /api/

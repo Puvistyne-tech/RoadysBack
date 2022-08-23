@@ -2,14 +2,10 @@
   "name": "back-end",
   "version": "1.0.0",
   "main": "index.js",
-  "engines": {
-    "node": "16.15.0"
-  },
   "scripts": {
     "start": "nodemon --exec npx babel-node src/index.js -e js,graphql,json",
-    "prisma:generate": "npx prisma generate --schema=./src/prisma/schema.prisma",
     "prisma:merge": "prisma-merge",
-    "prisma:migrate": "prisma migrate dev --schema src/prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema ./src/prisma/schema.prisma",
     "seed:users": "nodemon --exec npx babel-node src/seeds/seedUser.js -e js,json"
   },
   "repository": "git@gitlab.com:PierreCHEVALLIER-THILL/roadys.git",
