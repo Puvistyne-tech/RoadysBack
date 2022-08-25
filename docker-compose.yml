@@ -13,7 +13,7 @@ services:
       npm run prisma:merge &&
       npm start"
     ports:
-      - 6565:6565
+      - 80:6565
     volumes:
       - .:/api
     networks:
