@@ -13,13 +13,13 @@ services:
       npm run prisma:merge &&
       npm start"
     ports:
-      - 80:6565
+      - 8080:8080
     volumes:
       - .:/api
     networks:
       - roadys_network
     environment:
-      - API_PORT=6565
+      - API_PORT=8080
       - POSTGRES_URL=postgresql://roadys:roadys_password@postgres:5432/roadys?schema=public
       - JWT_SECRET=couleurcoucou
 
